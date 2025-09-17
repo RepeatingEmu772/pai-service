@@ -1,4 +1,3 @@
-
 import os
 from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -13,7 +12,7 @@ env_file = env_file_map.get(env, ".env.local")
 
 class Settings(BaseSettings):
     app_name: str = "Awesome API"
-    open_ai_key: str
+    openai_api_key: str
     pg_connect_str: str
     app_env: str = "local"
     debug: bool = False
